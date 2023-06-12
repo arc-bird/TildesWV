@@ -23,6 +23,8 @@ import android.webkit.WebStorage;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
+import java.util.HashMap;
+import java.util.Map;
 
 import java.util.ArrayList;
 
@@ -33,6 +35,7 @@ public class MainActivity extends Activity {
     private CookieManager tildesCookieManager = null;
     private final Context context = this;
     private String TAG = "TildesWV";
+    private String PRIV_UA = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0";
     private String urlToLoad = "https://tildes.net/";
 
     private static final ArrayList<String> allowedDomains = new ArrayList<String>();
@@ -62,7 +65,9 @@ public class MainActivity extends Activity {
         tildesWebView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                view.loadUrl(request.getUrl().toString());
+                Map<String, String> extraHeaders = new HashMap<>();
+                extraHeaders.put("X-Requested-With", "");
+                view.loadUrl(request.getUrl().toString(), extraHeaders);
                 return false;
             }
         });
@@ -74,6 +79,7 @@ public class MainActivity extends Activity {
 
         tildesWebSettings = tildesWebView.getSettings();
 
+        tildesWebSettings.setUserAgentString(PRIV_UA);
         tildesWebSettings.setJavaScriptEnabled(true);
         tildesWebSettings.setCacheMode(WebSettings.LOAD_DEFAULT);
         tildesWebSettings.setDomStorageEnabled(true);
