@@ -1,8 +1,8 @@
 # TildesWV
 
-TildesWV is just a WebView wrapper for the social media network Tildes (https://tildes.net/). It does not interact with the Tildes API or provide any functionality beyond that of the Tildes website. Its only benefit is that it allows one to access Tildes from an app using the native Android WebView system, rather than having to use a full-blown web browser.
+TildesWV is just a WebView wrapper for the social media network Tildes (https://tildes.net/). It does not interact with the Tildes API or provide any functiionality beyond that of the Tildes website. Its only benefit is that it allows one to access Tildes from an app using the native Android WebView system, rather than having to use a full-blown web browser.
 
-Users are (should be) able to log in to their Tildes account, provided they have one, or browse anonymously. The WebView does not delete cookies, so preferences and accounts should remain, at least for a while. It does allow users to return to a previous page via their phone's 'back' button.
+Users are (should be) able to log in to their Tildes account, provided they have one, or browse anonymously. The WebView does not delete cookies, so preferences and accounts should remain, at least for a while.
 
 This app is essentially a fork of woheller69's gptAssist (https://github.com/woheller69/gptassist), with some limiting functionality removed and the ability to open links within the view, instead of being redirected to your favorite mobile browser.
 
