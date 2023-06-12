@@ -8,6 +8,14 @@ This app is essentially a fork of woheller69's gptAssist (https://github.com/woh
 
 I hope it suits your needs!
 
+## Installation and Updating
+
+Since I have not (and don't really plan to) listed this on an app store or repository, the app must be downloaded from the [releases page](https://github.com/Sipesy/TildesWV/releases). Once you are there, simply find the latest release (at this time, v0.1.1-alpha) and click or tap on `app-release.apk` to download the release to your device.
+
+To install the app, you may have to enable *Install Apps from Unknown Sources* in your device settings. Most newer phones will automatically prompt you to do this when you try to install an unknown app, but other devices may simply deny the install. To use the app on such devices, you will have to enable [developer options](https://developer.android.com/studio/debug/dev-options) and toggle the setting from there.
+
+If a new version of the app is released (again, the app is not listed in any repositories at this time), you will have to return to the releases page and manually download and install the latest release. On the bright side, there likely won't be many changes to worry about.
+
 ## License
 
 This app is licensed under the GPLv3.
